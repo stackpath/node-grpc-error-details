@@ -1,0 +1,51 @@
+{
+  "name": "@sp/node-grpc-error-details",
+  "version": "0.0.1",
+  "description": "Utility for deserializing grpc-status-details-bin",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "author": "The StackPath Development Team <developers@stackpath.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/google-protobuf": "*",
+    "@types/node": "*",
+    "@types/protobufjs": "*"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.9",
+    "google-protobuf": "^3.7.0",
+    "grpc": "^1.18.0",
+    "grpc-tools": "^1.7.1",
+    "grpc_tools_node_protoc_ts": "^2.5.0",
+    "jest": "^24.1.0",
+    "prettier": "^1.16.4",
+    "ts-jest": "^24.0.0",
+    "typescript": "^3.3.3333"
+  },
+  "peerDependencies": {
+    "google-protobuf": ">=3",
+    "grpc": ">=1"
+  },
+  "scripts": {
+    "build": "rm -rf build && tsc && cp -R ./src/generated ./build/generated && rm -rf build/__tests__",
+    "genProto": "sh genProto.sh",
+    "test": "jest"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}
