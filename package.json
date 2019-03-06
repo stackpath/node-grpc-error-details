@@ -1,6 +1,6 @@
 {
   "name": "@stackpath/node-grpc-error-details",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Utility for deserializing grpc-status-details-bin",
   "main": "build/index.js",
   "types": "build/index.d.ts",
