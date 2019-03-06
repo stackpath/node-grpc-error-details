@@ -10,10 +10,10 @@ This library, given an error, returns back the deserialized Status message and a
 
 ```bash
 # yarn
-yarn add stackpath/node-grpc-error-details
+yarn add @stackpath/node-grpc-error-details
 
 # npm
-npm install stackpath/node-grpc-error-details
+npm install @stackpath/node-grpc-error-details
 ```
 
 ## Usage
@@ -38,7 +38,7 @@ where `status` is a [Google rpc Status message](./src/proto/status.proto) and `d
 Example:
 
 ```js
-import { deserializeGrpcStatusDetails } from "stackpath/node-grpc-error-details";
+import { deserializeGrpcStatusDetails } from "@stackpath/node-grpc-error-details";
 import {
   RetryInfo,
   DebugInfo,
@@ -87,7 +87,7 @@ Example:
 import {
   deserializeGoogleGrpcStatusDetails,
   BadRequest
-} from "stackpath/node-grpc-error-details";
+} from "@stackpath/node-grpc-error-details";
 
 const point = { latitude: 409146138, longitude: -746188906 };
 
