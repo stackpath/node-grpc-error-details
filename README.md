@@ -1,5 +1,8 @@
 # node-grpc-error-details
 
+[![Version](https://img.shields.io/npm/v/@stackpath/node-grpc-error-details.svg)](https://www.npmjs.com/package/@stackpath/node-grpc-error-details)
+[![License](https://img.shields.io/npm/l/@stackpath/node-grpc-error-details.svg)](https://www.npmjs.com/package/@stackpath/node-grpc-error-details)
+
 Utility function for deserializing the `grpc-status-details-bin` metadata value when using the [node grpc](https://github.com/grpc/grpc-node/tree/master/packages/grpc-native-core) package. Error details allow sending/receiving additional data along with an error. For instance, if a request sends invalid data, a gRPC server could send back a [BadRequest](./src/proto/error_details.proto#L119) message identifying the field and why it failed validation.
 
 gRPC services that send rich error details place information in the `grpc-status-details-bin` metadata property of the [ServiceError](https://grpc.io/grpc/node/grpc.html#~ServiceError) passed to the callback of a failed gRPC method call. The value of the `grpc-status-details-bin` field is a serialized [Status](./src/proto/status.proto) message. The Status message's details field is an array of [Any](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/any.proto#L122) messages, which consist of a type field and the serialized data for that message type.
