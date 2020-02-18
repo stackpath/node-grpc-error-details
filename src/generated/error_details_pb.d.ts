@@ -2,6 +2,7 @@
 // file: error_details.proto
 
 /* tslint:disable */
+/* eslint-disable */
 
 import * as jspb from "google-protobuf";
 import * as google_protobuf_duration_pb from "google-protobuf/google/protobuf/duration_pb";
@@ -81,11 +82,11 @@ export namespace QuotaFailure {
 
 
     export class Violation extends jspb.Message { 
-    getSubject(): string;
-    setSubject(value: string): void;
+        getSubject(): string;
+        setSubject(value: string): void;
 
-    getDescription(): string;
-    setDescription(value: string): void;
+        getDescription(): string;
+        setDescription(value: string): void;
 
 
         serializeBinary(): Uint8Array;
@@ -100,8 +101,8 @@ export namespace QuotaFailure {
 
     export namespace Violation {
         export type AsObject = {
-        subject: string,
-        description: string,
+            subject: string,
+            description: string,
         }
     }
 
@@ -131,14 +132,14 @@ export namespace PreconditionFailure {
 
 
     export class Violation extends jspb.Message { 
-    getType(): string;
-    setType(value: string): void;
+        getType(): string;
+        setType(value: string): void;
 
-    getSubject(): string;
-    setSubject(value: string): void;
+        getSubject(): string;
+        setSubject(value: string): void;
 
-    getDescription(): string;
-    setDescription(value: string): void;
+        getDescription(): string;
+        setDescription(value: string): void;
 
 
         serializeBinary(): Uint8Array;
@@ -153,9 +154,9 @@ export namespace PreconditionFailure {
 
     export namespace Violation {
         export type AsObject = {
-        type: string,
-        subject: string,
-        description: string,
+            type: string,
+            subject: string,
+            description: string,
         }
     }
 
@@ -185,11 +186,11 @@ export namespace BadRequest {
 
 
     export class FieldViolation extends jspb.Message { 
-    getField(): string;
-    setField(value: string): void;
+        getField(): string;
+        setField(value: string): void;
 
-    getDescription(): string;
-    setDescription(value: string): void;
+        getDescription(): string;
+        setDescription(value: string): void;
 
 
         serializeBinary(): Uint8Array;
@@ -204,8 +205,8 @@ export namespace BadRequest {
 
     export namespace FieldViolation {
         export type AsObject = {
-        field: string,
-        description: string,
+            field: string,
+            description: string,
         }
     }
 
@@ -293,11 +294,11 @@ export namespace Help {
 
 
     export class Link extends jspb.Message { 
-    getDescription(): string;
-    setDescription(value: string): void;
+        getDescription(): string;
+        setDescription(value: string): void;
 
-    getUrl(): string;
-    setUrl(value: string): void;
+        getUrl(): string;
+        setUrl(value: string): void;
 
 
         serializeBinary(): Uint8Array;
@@ -312,8 +313,8 @@ export namespace Help {
 
     export namespace Link {
         export type AsObject = {
-        description: string,
-        url: string,
+            description: string,
+            url: string,
         }
     }
 
