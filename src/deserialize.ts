@@ -9,7 +9,8 @@ import {
   RequestInfo,
   ResourceInfo,
   Help,
-  LocalizedMessage
+  LocalizedMessage,
+  ErrorInfo
 } from "./generated/error_details_pb";
 
 export const googleDeserializeMap = {
@@ -21,7 +22,8 @@ export const googleDeserializeMap = {
   "google.rpc.RequestInfo": RequestInfo.deserializeBinary,
   "google.rpc.ResourceInfo": ResourceInfo.deserializeBinary,
   "google.rpc.Help": Help.deserializeBinary,
-  "google.rpc.LocalizedMessage": LocalizedMessage.deserializeBinary
+  "google.rpc.LocalizedMessage": LocalizedMessage.deserializeBinary,
+  "google.rpc.ErrorInfo": ErrorInfo.deserializeBinary
 };
 
 interface ServiceError {
