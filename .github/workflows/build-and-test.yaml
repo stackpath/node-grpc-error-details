@@ -1,0 +1,31 @@
+name: Build and test
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [ '10', '12', '14', '16' ]
+    name: Run in node v${{ matrix.node }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up node v${{ matrix.node }}
+        uses: actions/setup-node@v2
+        with: 
+          node-version: ${{ matrix.node }}
+
+      - name: Install global dependencies
+        run: yarn global add node-pre-gyp
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Run tests
+        run: yarn test
+
+      - name: Build
+        run: yarn build        
