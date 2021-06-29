@@ -9,13 +9,13 @@
   "dependencies": {
     "@types/google-protobuf": "*",
     "@types/node": "*",
-    "@types/protobufjs": "*"
+    "@types/protobufjs": "*",
+    "google-protobuf": "^3.11.4",
+    "grpc": "^1.24.2"
   },
   "devDependencies": {
     "@types/jest": "^25.1.2",
     "cpr": "^3.0.1",
-    "google-protobuf": "^3.11.4",
-    "grpc": "^1.24.2",
     "grpc-tools": "1.8.1",
     "grpc_tools_node_protoc_ts": "^2.5.10",
     "husky": "^4.2.3",
@@ -25,10 +25,6 @@
     "rimraf": "^3.0.2",
     "ts-jest": "^25.2.0",
     "typescript": "^3.7.5"
-  },
-  "peerDependencies": {
-    "google-protobuf": ">=3",
-    "grpc": ">=1"
   },
   "scripts": {
     "build": "rimraf build && tsc && cpr ./src/generated ./build/generated && rimraf build/__tests__",
