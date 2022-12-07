@@ -1,4 +1,4 @@
-import { Metadata } from "grpc";
+import { Metadata } from "@grpc/grpc-js";
 import { Any } from "google-protobuf/google/protobuf/any_pb";
 import {
   BadRequest,

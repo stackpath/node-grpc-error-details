@@ -9,14 +9,13 @@
   "dependencies": {
     "@types/google-protobuf": "*",
     "@types/node": "*",
-    "@types/protobufjs": "*",
     "google-protobuf": "^3.11.4",
-    "grpc": "^1.24.2"
+    "@grpc/grpc-js": "^1.7.3"
   },
   "devDependencies": {
     "@types/jest": "^25.1.2",
     "cpr": "^3.0.1",
-    "grpc-tools": "1.8.1",
+    "grpc-tools": "1.12.3",
     "grpc_tools_node_protoc_ts": "^2.5.10",
     "husky": "^4.2.3",
     "jest": "^25.1.0",
