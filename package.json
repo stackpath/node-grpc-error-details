@@ -7,11 +7,11 @@
   "author": "The StackPath Development Team <developers@stackpath.com>",
   "license": "MIT",
   "dependencies": {
+    "@grpc/grpc-js": "^1.8.13",
     "@types/google-protobuf": "*",
     "@types/node": "*",
     "@types/protobufjs": "*",
-    "google-protobuf": "^3.11.4",
-    "grpc": "^1.24.2"
+    "google-protobuf": "^3.11.4"
   },
   "devDependencies": {
     "@types/jest": "^25.1.2",
