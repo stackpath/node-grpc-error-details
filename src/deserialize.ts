@@ -1,4 +1,4 @@
-import { Metadata } from "grpc";
+import { Metadata } from "@grpc/grpc-js";
 import { Status } from "./generated/status_pb";
 import {
   RetryInfo,
