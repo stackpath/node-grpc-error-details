@@ -7,34 +7,29 @@
   "author": "The StackPath Development Team <developers@stackpath.com>",
   "license": "MIT",
   "dependencies": {
-    "@types/google-protobuf": "*",
-    "@types/node": "*",
-    "@types/protobufjs": "*",
-    "google-protobuf": "^3.11.4",
-    "grpc": "^1.24.2"
+    "@grpc/grpc-js": "^1.9.0",
+    "@types/google-protobuf": "3.15.6",
+    "@types/node": "20.5.1",
+    "google-protobuf": "^3.21.2"
   },
   "devDependencies": {
-    "@types/jest": "^25.1.2",
+    "@types/jest": "^29.5.3",
     "cpr": "^3.0.1",
-    "grpc-tools": "1.8.1",
-    "grpc_tools_node_protoc_ts": "^2.5.10",
-    "husky": "^4.2.3",
-    "jest": "^25.1.0",
-    "lint-staged": "^10.0.7",
-    "prettier": "^1.19.1",
-    "rimraf": "^3.0.2",
-    "ts-jest": "^25.2.0",
-    "typescript": "^3.7.5"
+    "grpc-tools": "1.12.4",
+    "grpc_tools_node_protoc_ts": "^5.3.3",
+    "husky": "^8.0.0",
+    "jest": "^29.6.2",
+    "lint-staged": "^14.0.0",
+    "prettier": "^3.0.2",
+    "rimraf": "^5.0.1",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.1.6"
   },
   "scripts": {
     "build": "rimraf build && tsc && cpr ./src/generated ./build/generated && rimraf build/__tests__",
     "genProto": "protoc --plugin=protoc-gen-grpc=./node_modules/.bin/grpc_tools_node_protoc_plugin -I src/proto --js_out=import_style=commonjs,binary:./src/generated ./src/proto/*.proto && protoc --plugin=protoc-gen-ts=./node_modules/.bin/protoc-gen-ts -I src/proto --ts_out=./src/generated ./src/proto/*.proto",
-    "test": "jest"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "test": "jest",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.{ts,js,json,css,md}": [
