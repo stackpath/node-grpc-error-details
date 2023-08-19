@@ -1,4 +1,4 @@
-import { Metadata } from "grpc";
+import { Metadata } from "@grpc/grpc-js";
 import { Any } from "google-protobuf/google/protobuf/any_pb";
 import {
   BadRequest,
@@ -61,7 +61,7 @@ describe("deserialize", () => {
       expect(deserialized).not.toEqual(null);
 
       expect(Object.keys(deserialized!)).toMatchInlineSnapshot(`
-Array [
+[
   "status",
   "details",
 ]
@@ -73,35 +73,35 @@ Array [
       };
 
       expect(deserializedObj).toMatchInlineSnapshot(`
-Object {
-  "details": Array [
-    Object {
-      "fieldViolationsList": Array [
-        Object {
+{
+  "details": [
+    {
+      "fieldViolationsList": [
+        {
           "description": "field1 is not valid",
           "field": "field1",
         },
-        Object {
+        {
           "description": "field2 is not valid",
           "field": "field2",
         },
       ],
     },
-    Object {
+    {
       "description": "Resource Info Description",
       "owner": "Owner",
       "resourceName": "resourceName",
       "resourceType": "resourceType",
     },
   ],
-  "status": Object {
+  "status": {
     "code": 3,
-    "detailsList": Array [
-      Object {
+    "detailsList": [
+      {
         "typeUrl": "type.googleapis.com/google.rpc.BadRequest",
         "value": "Ch0KBmZpZWxkMRITZmllbGQxIGlzIG5vdCB2YWxpZAodCgZmaWVsZDISE2ZpZWxkMiBpcyBub3QgdmFsaWQ=",
       },
-      Object {
+      {
         "typeUrl": "type.googleapis.com/google.rpc.ResourceInfo",
         "value": "CgxyZXNvdXJjZVR5cGUSDHJlc291cmNlTmFtZRoFT3duZXIiGVJlc291cmNlIEluZm8gRGVzY3JpcHRpb24=",
       },
@@ -124,7 +124,7 @@ Object {
       expect(deserialized).not.toEqual(null);
 
       expect(Object.keys(deserialized!)).toMatchInlineSnapshot(`
-Array [
+[
   "status",
   "details",
 ]
@@ -136,35 +136,35 @@ Array [
       };
 
       expect(deserializedObj).toMatchInlineSnapshot(`
-Object {
-  "details": Array [
-    Object {
-      "fieldViolationsList": Array [
-        Object {
+{
+  "details": [
+    {
+      "fieldViolationsList": [
+        {
           "description": "field1 is not valid",
           "field": "field1",
         },
-        Object {
+        {
           "description": "field2 is not valid",
           "field": "field2",
         },
       ],
     },
-    Object {
+    {
       "description": "Resource Info Description",
       "owner": "Owner",
       "resourceName": "resourceName",
       "resourceType": "resourceType",
     },
   ],
-  "status": Object {
+  "status": {
     "code": 3,
-    "detailsList": Array [
-      Object {
+    "detailsList": [
+      {
         "typeUrl": "type.googleapis.com/google.rpc.BadRequest",
         "value": "Ch0KBmZpZWxkMRITZmllbGQxIGlzIG5vdCB2YWxpZAodCgZmaWVsZDISE2ZpZWxkMiBpcyBub3QgdmFsaWQ=",
       },
-      Object {
+      {
         "typeUrl": "type.googleapis.com/google.rpc.ResourceInfo",
         "value": "CgxyZXNvdXJjZVR5cGUSDHJlc291cmNlTmFtZRoFT3duZXIiGVJlc291cmNlIEluZm8gRGVzY3JpcHRpb24=",
       },

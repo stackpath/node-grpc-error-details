@@ -12,8 +12,7 @@ export class RetryInfo extends jspb.Message {
     hasRetryDelay(): boolean;
     clearRetryDelay(): void;
     getRetryDelay(): google_protobuf_duration_pb.Duration | undefined;
-    setRetryDelay(value?: google_protobuf_duration_pb.Duration): void;
-
+    setRetryDelay(value?: google_protobuf_duration_pb.Duration): RetryInfo;
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): RetryInfo.AsObject;
@@ -34,12 +33,10 @@ export namespace RetryInfo {
 export class DebugInfo extends jspb.Message { 
     clearStackEntriesList(): void;
     getStackEntriesList(): Array<string>;
-    setStackEntriesList(value: Array<string>): void;
+    setStackEntriesList(value: Array<string>): DebugInfo;
     addStackEntries(value: string, index?: number): string;
-
     getDetail(): string;
-    setDetail(value: string): void;
-
+    setDetail(value: string): DebugInfo;
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): DebugInfo.AsObject;
@@ -61,9 +58,8 @@ export namespace DebugInfo {
 export class QuotaFailure extends jspb.Message { 
     clearViolationsList(): void;
     getViolationsList(): Array<QuotaFailure.Violation>;
-    setViolationsList(value: Array<QuotaFailure.Violation>): void;
+    setViolationsList(value: Array<QuotaFailure.Violation>): QuotaFailure;
     addViolations(value?: QuotaFailure.Violation, index?: number): QuotaFailure.Violation;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): QuotaFailure.AsObject;
@@ -83,11 +79,9 @@ export namespace QuotaFailure {
 
     export class Violation extends jspb.Message { 
         getSubject(): string;
-        setSubject(value: string): void;
-
+        setSubject(value: string): Violation;
         getDescription(): string;
-        setDescription(value: string): void;
-
+        setDescription(value: string): Violation;
 
         serializeBinary(): Uint8Array;
         toObject(includeInstance?: boolean): Violation.AsObject;
@@ -110,15 +104,12 @@ export namespace QuotaFailure {
 
 export class ErrorInfo extends jspb.Message { 
     getReason(): string;
-    setReason(value: string): void;
-
+    setReason(value: string): ErrorInfo;
     getDomain(): string;
-    setDomain(value: string): void;
-
+    setDomain(value: string): ErrorInfo;
 
     getMetadataMap(): jspb.Map<string, string>;
     clearMetadataMap(): void;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): ErrorInfo.AsObject;
@@ -142,9 +133,8 @@ export namespace ErrorInfo {
 export class PreconditionFailure extends jspb.Message { 
     clearViolationsList(): void;
     getViolationsList(): Array<PreconditionFailure.Violation>;
-    setViolationsList(value: Array<PreconditionFailure.Violation>): void;
+    setViolationsList(value: Array<PreconditionFailure.Violation>): PreconditionFailure;
     addViolations(value?: PreconditionFailure.Violation, index?: number): PreconditionFailure.Violation;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): PreconditionFailure.AsObject;
@@ -164,14 +154,11 @@ export namespace PreconditionFailure {
 
     export class Violation extends jspb.Message { 
         getType(): string;
-        setType(value: string): void;
-
+        setType(value: string): Violation;
         getSubject(): string;
-        setSubject(value: string): void;
-
+        setSubject(value: string): Violation;
         getDescription(): string;
-        setDescription(value: string): void;
-
+        setDescription(value: string): Violation;
 
         serializeBinary(): Uint8Array;
         toObject(includeInstance?: boolean): Violation.AsObject;
@@ -196,9 +183,8 @@ export namespace PreconditionFailure {
 export class BadRequest extends jspb.Message { 
     clearFieldViolationsList(): void;
     getFieldViolationsList(): Array<BadRequest.FieldViolation>;
-    setFieldViolationsList(value: Array<BadRequest.FieldViolation>): void;
+    setFieldViolationsList(value: Array<BadRequest.FieldViolation>): BadRequest;
     addFieldViolations(value?: BadRequest.FieldViolation, index?: number): BadRequest.FieldViolation;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): BadRequest.AsObject;
@@ -218,11 +204,9 @@ export namespace BadRequest {
 
     export class FieldViolation extends jspb.Message { 
         getField(): string;
-        setField(value: string): void;
-
+        setField(value: string): FieldViolation;
         getDescription(): string;
-        setDescription(value: string): void;
-
+        setDescription(value: string): FieldViolation;
 
         serializeBinary(): Uint8Array;
         toObject(includeInstance?: boolean): FieldViolation.AsObject;
@@ -245,11 +229,9 @@ export namespace BadRequest {
 
 export class RequestInfo extends jspb.Message { 
     getRequestId(): string;
-    setRequestId(value: string): void;
-
+    setRequestId(value: string): RequestInfo;
     getServingData(): string;
-    setServingData(value: string): void;
-
+    setServingData(value: string): RequestInfo;
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): RequestInfo.AsObject;
@@ -270,17 +252,13 @@ export namespace RequestInfo {
 
 export class ResourceInfo extends jspb.Message { 
     getResourceType(): string;
-    setResourceType(value: string): void;
-
+    setResourceType(value: string): ResourceInfo;
     getResourceName(): string;
-    setResourceName(value: string): void;
-
+    setResourceName(value: string): ResourceInfo;
     getOwner(): string;
-    setOwner(value: string): void;
-
+    setOwner(value: string): ResourceInfo;
     getDescription(): string;
-    setDescription(value: string): void;
-
+    setDescription(value: string): ResourceInfo;
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): ResourceInfo.AsObject;
@@ -304,9 +282,8 @@ export namespace ResourceInfo {
 export class Help extends jspb.Message { 
     clearLinksList(): void;
     getLinksList(): Array<Help.Link>;
-    setLinksList(value: Array<Help.Link>): void;
+    setLinksList(value: Array<Help.Link>): Help;
     addLinks(value?: Help.Link, index?: number): Help.Link;
-
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Help.AsObject;
@@ -326,11 +303,9 @@ export namespace Help {
 
     export class Link extends jspb.Message { 
         getDescription(): string;
-        setDescription(value: string): void;
-
+        setDescription(value: string): Link;
         getUrl(): string;
-        setUrl(value: string): void;
-
+        setUrl(value: string): Link;
 
         serializeBinary(): Uint8Array;
         toObject(includeInstance?: boolean): Link.AsObject;
@@ -353,11 +328,9 @@ export namespace Help {
 
 export class LocalizedMessage extends jspb.Message { 
     getLocale(): string;
-    setLocale(value: string): void;
-
+    setLocale(value: string): LocalizedMessage;
     getMessage(): string;
-    setMessage(value: string): void;
-
+    setMessage(value: string): LocalizedMessage;
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): LocalizedMessage.AsObject;
